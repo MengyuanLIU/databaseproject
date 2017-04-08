@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd" >
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.driver_class">
+		org.gjt.mm.mysql.Driver
+	</property>
+	<property name="connection.url">
+		jdbc:mysql://localhost:3306/hrmanage?setUnicode=true&amp;characterEncoding=UTF8
+	</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">root</property>
+
+	<property name="dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+	<!-- 设置hibernate事务自动提交，否则增删改没有效果 -->
+	<property name="hibernate.connection.autocommit">true</property>
+	<mapping resource="config/hibernate/manager.hbm.xml" />
+	<mapping resource="config/hibernate/dept.hbm.xml"/>
+	<mapping resource="config/hibernate/train.hbm.xml"/>
+	<mapping resource="config/hibernate/em.hbm.xml"/>
+	<mapping resource="config/hibernate/salarybase.hbm.xml"/>
+	<mapping resource="config/hibernate/salaryrec.hbm.xml"/>
+	<mapping resource="config/hibernate/cdt.hbm.xml"/>
+	<mapping resource="config/hibernate/plan.hbm.xml"/>
+</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-cglib-repack-2.1_3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-validator.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jcaptcha-1.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jta.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mysql-connector-java-5.0.5-bin.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/struts2-core-2.1.8.jar" sourcepath="C:/Documents and Settings/Administrator/.m2/repository/org/apache/struts/struts2-core/2.1.8/struts2-core-2.1.8-sources.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/struts2-spring-plugin-2.1.8.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xwork-core-2.1.6.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-fileupload-1.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-io-1.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/freemarker-2.3.15.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ognl-2.7.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.generic_5.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.jstl_1.2">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jst.web.jstl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Java JDK VM 1.8.0_u66 Windows"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

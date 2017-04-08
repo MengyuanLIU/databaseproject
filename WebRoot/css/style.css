@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: "宋体";
+	font-size: 12px;
+	color: #333333;
+	background-color: #2286C2;
+}
+table{
+font-size: 12px;
+
+}
+
+a:link{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+a:visited{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+a:hover{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #144882;
+	text-decoration: underline;
+}
+.font1{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #333333;
+}
+.txt{
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #333333;
+	width:150px;
+}
+a.font1:link{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+a.font1:visited{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+a.font1:hover{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #144882;
+	text-decoration: underline;
+}
+.font2{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #144882;
+}
+a.font2:link{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #144882;
+	text-decoration: none;
+}
+a.font2:visited{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #144882;
+	text-decoration: none;
+}
+a.font2:hover{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #144882;
+	text-decoration: underline;
+}
+.font3{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #ffffff;
+}
+a.font3:link{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #ffffff;
+	text-decoration: none;
+}
+a.font3:visited{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #ffffff;
+	text-decoration: none;
+}
+a.font3:hover{
+	font-family: "";
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.formTable{
+border:1px solid #CAF2FF;
+
+}
+.tabIndex{
+background:#E4F1FA;
+height:30px;
+color:#1E5494;
+font-weight:700;
+width:80px;
+text-align:right;
+padding-top:10px;
+}

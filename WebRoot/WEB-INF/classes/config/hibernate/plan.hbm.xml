@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.tjw.hrmanage.model.Plan" table="t_plan">
+		<id name="planId" type="integer">
+			<column name="f_planId"></column>
+			<generator class="native"></generator>
+		</id>
+		<property name="planTitle" type="string" unique="true">
+			<column name="f_planTitle" length="50"></column>
+		</property>
+		<property name="planMan" type="string">
+			<column name="f_planMan" length="20"></column>
+		</property>
+		<property name="planTime" type="date">
+			<column name="f_planTime"></column>
+		</property>
+		<property name="planContent" type="string">
+			<column name="f_planContent" length="256"></column>
+		</property>
+		
+		
+		
+	</class>
+</hibernate-mapping>

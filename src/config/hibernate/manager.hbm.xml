@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="com.tjw.hrmanage.model.Manager" table="t_manager">
+  <id name="managerId" type="integer">
+   <column name="f_managerId"/>
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="account" type="string" unique="true">
+   <column length="30" name="f_account"/>
+  </property>
+  <property generated="never" lazy="false" name="password" type="string">
+   <column length="64" name="f_password"/>
+  </property>
+  <property generated="never" lazy="false" name="managerLevel" type="string">
+   <column length="1" name="f_managerLevel"/>
+  </property>
+  <property generated="never" lazy="false" name="realName" type="string">
+   <column length="30" name="f_realName"/>
+  </property>
+  <property generated="never" lazy="false" name="regDate" type="date">
+   <column name="f_regDate"/>
+  </property>
+  <property generated="never" lazy="false" name="loginCnt" type="integer">
+   <column length="10" name="f_loginCnt"/>
+  </property>
+  <property generated="never" lazy="false" name="lastLoginDate" type="string">
+   <column length="30" name="f_lastLoginDate"/>
+  </property>
+  <property generated="never" lazy="false" name="currLoginDate" type="string">
+   <column length="30" name="f_currLoginDate"/>
+  </property>
+ </class>
+</hibernate-mapping>

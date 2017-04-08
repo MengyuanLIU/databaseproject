@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+<!-- 登录 -->
+<bean  class="com.tjw.hrmanage.web.action.LoginAction" scope="prototype">
+	<property name="loginService" ref="loginService"></property>
+	<property name="deptService" ref="deptService"></property>
+</bean>
+<bean id="loginService" class="com.tjw.hrmanage.service.impl.LoginServiceImpl">
+	<property name="loginDao" ref="loginDao"></property>
+	<property name="managerDao" ref="managerDao"></property>
+</bean>
+<bean id="loginDao" class="com.tjw.hrmanage.dao.impl.LoginDaoImpl">
+	<property name="template" ref="hibernateTemplate"></property>
+</bean>
+<!-- 管理员相关操作 -->
+<bean  class="com.tjw.hrmanage.web.action.ManagerAction" scope="prototype">
+	<property name="managerService" ref="managerService"></property>
+</bean>
+<bean id="managerService" class="com.tjw.hrmanage.service.impl.ManagerServiceImpl">
+	<property name="managerDao" ref="managerDao"></property>
+</bean>
+<bean id="managerDao" class="com.tjw.hrmanage.dao.impl.ManagerDaoImpl">
+	<property name="template" ref="hibernateTemplate"></property>
+</bean>
+<!-- 部门相关操作 -->
+<bean  class="com.tjw.hrmanage.web.action.DeptAction" scope="prototype">
+	<property name="deptService" ref="deptService"></property>
+	<property name="emService" ref="emService"></property>
+</bean>
+<bean id="deptService" class="com.tjw.hrmanage.service.impl.DeptServiceImpl">
+	<property name="deptDao" ref="deptDao"></property>
+</bean>
+<bean id="deptDao" class="com.tjw.hrmanage.dao.impl.DeptDaoImpl">
+	<property name="template" ref="hibernateTemplate"></property>
+</bean>
+<!-- 员工相关操作 -->
+<bean  class="com.tjw.hrmanage.web.action.EmAction" scope="prototype">
+	<property name="emService" ref="emService"></property>
+	<property name="deptService" ref="deptService"></property>
+</bean>
+<bean id="emService" class="com.tjw.hrmanage.service.impl.EmServiceImpl">
+	<property name="emDao" ref="emDao"></property>
+</bean>
+<bean id="emDao" class="com.tjw.hrmanage.dao.impl.EmDaoImpl">
+	<property name="template" ref="hibernateTemplate"></property>
+</bean>
+<!-- 薪资基表相关操作 -->
+<bean class="com.tjw.hrmanage.web.action.SalaryBaseAction" scope="prototype">
+	<property name="emService" ref="emService"></property>
+	<property name="deptService" ref="deptService"></property>
+</bean>
+<!-- 薪资发放记录表相关操作 -->
+<bean  class="com.tjw.hrmanage.web.action.SalaryRecAction" scope="prototype">
+	<property name="salaryRecService" ref="salaryRecService"></property>
+	<property name="emService" ref="emService"></property>
+</bean>
+<bean id="salaryRecService" class="com.tjw.hrmanage.service.impl.SalaryRecServiceImpl">
+	<property name="salaryRecDao" ref="salaryRecDao"></property>
+</bean>
+<bean id="salaryRecDao" class="com.tjw.hrmanage.dao.impl.SalaryRecDaoImpl">
+	<property name="template" ref="hibernateTemplate"></property>
+</bean>
+<!-- 应聘者相关操作 -->
+<bean  class="com.tjw.hrmanage.web.action.CandidateAction" scope="prototype">
+	<property name="candidateService" ref="candidateService"></property>
+</bean>
+<bean id="candidateService" class="com.tjw.hrmanage.service.impl.CandidateServiceImpl">
+	<property name="candidateDao" ref="candidateDao"></property>
+</bean>
+<bean id="candidateDao" class="com.tjw.hrmanage.dao.impl.CandidateDaoImpl">
+	<property name="template" ref="hibernateTemplate"></property>
+</bean>
+<!-- 培训相关操作 -->
+<bean  class="com.tjw.hrmanage.web.action.TrainAction" scope="prototype">
+	<property name="trainService" ref="trainService"></property>
+</bean>
+<bean id="trainService" class="com.tjw.hrmanage.service.impl.TrainServiceImpl">
+	<property name="trainDao" ref="trainDao"></property>
+</bean>
+<bean id="trainDao" class="com.tjw.hrmanage.dao.impl.TrainDaoImpl">
+	<property name="template" ref="hibernateTemplate"></property>
+</bean>
+<!-- 人事计划相关操作 -->
+<bean  class="com.tjw.hrmanage.web.action.PlanAction" scope="prototype">
+	<property name="planService" ref="planService"></property>
+</bean>
+<bean id="planService" class="com.tjw.hrmanage.service.impl.PlanServiceImpl">
+	<property name="planDao" ref="planDao"></property>
+</bean>
+<bean id="planDao" class="com.tjw.hrmanage.dao.impl.PlanDaoImpl">
+	<property name="template" ref="hibernateTemplate"></property>
+</bean>
+</beans>

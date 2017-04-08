@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.tjw.hrmanage.model.SalaryRec" table="t_salaryrec">
+		<id name="salaryRecId" type="integer">
+			<column name="f_salaryRecId"></column>
+			<generator class="native"></generator>
+		</id>
+		<property name="emSerialNumber" type="string">
+			<column name="f_emSerialNumber" length="32"></column>
+		</property>
+		<property name="emDept" type="string">
+			<column name="f_emDept" length="30"></column>
+		</property>
+		<property name="emName" type="string">
+			<column name="f_emName" length="20"></column>
+		</property>
+		
+		<property name="payMonth" type="date">
+			<column name="f_payMonth"></column>
+		</property>
+		
+		<property name="baseMoney" type="double">
+			<column name="f_baseMoney" length="30"></column>
+		</property>
+		
+		<property name="overtimeMoney" type="double">
+			<column name="f_overtimeMoney"></column>
+		</property>
+		
+		<property name="ageMoney" type="double">
+			<column name="f_ageMoney"></column>
+		</property>
+		
+		<property name="checkMoney" type="double">
+			<column name="f_checkMoney"></column>
+		</property>
+		
+		<property name="absentMoney" type="double">
+			<column name="f_absentMoney"></column>
+		</property>
+		
+		<property name="safetyMoney" type="double">
+			<column name="f_safetyMoney"></column>
+		</property>
+		<property name="actualMoney" type="double">
+			<column name="f_actualMoney"></column>
+		</property>
+		<property name="isPay" type="string">
+			<column name="f_isPay"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping>

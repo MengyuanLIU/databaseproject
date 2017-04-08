@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.tjw.hrmanage.model.Department" table="t_department">
+		<id name="deptId" type="integer">
+			<column name="f_deptId"></column>
+			<generator class="native"></generator>
+		</id>
+		<property name="deptName" type="string">
+			<column name="f_deptName" length="30"></column>
+		</property>
+		<property name="createTime" type="date">
+			<column name="f_createTime"></column>
+		</property>
+		<property name="peopleNum" type="integer">
+			<column name="f_peopleNum"></column>
+		</property>
+		<property name="deptNote" type="string">
+			<column name="f_deptNote" length="128"></column>
+		</property>
+	</class>
+</hibernate-mapping>

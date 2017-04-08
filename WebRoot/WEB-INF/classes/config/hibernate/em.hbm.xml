@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.tjw.hrmanage.model.Employee" table="t_employee">
+		<id name="emId" type="integer">
+			<column name="f_emId"></column>
+			<generator class="native"></generator>
+		</id>
+		<property name="emSerialNumber" type="string" unique="true">
+			<column name="f_emSerialNumber" length="30"></column>
+		</property>
+		<property name="emName" type="string">
+			<column name="f_emName" length="16"></column>
+		</property>
+		<property name="emSex" type="string">
+			<column name="f_emSex" length="8"></column>
+		</property>
+		<property name="emAge" type="integer">
+			<column name="f_emAge"></column>
+		</property>
+		<property name="emBorn" type="date">
+			<column name="f_emBorn"></column>
+		</property>
+		<property name="emIdCard" type="string">
+			<column name="f_emIdCard" length="30"></column>
+		</property>
+		<property name="emMz" type="string">
+			<column name="f_emMz" length="16"></column>
+		</property>
+		<property name="emMarriage" type="string">
+			<column name="f_Marriage" length="16"></column>
+		</property>
+		<property name="emZzmm" type="string">
+			<column name="f_emZzmm" length="16"></column>
+		</property>
+		<property name="emJg" type="string">
+			<column name="f_emJg" length="16"></column>
+		</property>
+		<property name="emTel" type="string">
+			<column name="f_emTel" length="16"></column>
+		</property>
+		<property name="emAddress" type="string">
+			<column name="f_emAddress" length="60"></column>
+		</property>
+		<property name="emGraduateSchool" type="string">
+			<column name="f_emGraduateSchool" length="60"></column>
+		</property>
+		<property name="emSpeciality" type="string">
+			<column name="f_emSpeciality" length="60"></column>
+		</property>
+		<property name="emDegree" type="string">
+			<column name="f_emDegree" length="16"></column>
+		</property>
+		<property name="emWorkTime" type="date">
+			<column name="f_emWorkTime"></column>
+		</property>
+		<property name="registerName" type="string">
+			<column name="f_registerName" length="16"></column>
+		</property>
+		<property name="registerTime" type="date">
+				<column name="f_registerTime"></column>
+		</property>
+		<property name="emNote" type="string">
+			<column name="f_emNote" length="128"></column>
+		</property>
+		<property name="deptGz" type="string">
+			<column name="f_deptGz" length="30"></column>
+		</property>
+		<many-to-one name="department" lazy="false" cascade="save-update"
+		class="com.tjw.hrmanage.model.Department">
+			<column name="f_deptId"></column>
+		</many-to-one>
+		<!-- 员工-薪资，单向一对一映射 -->
+		<!-- 用唯一外键方式实现一对一关系，唯一外键方式其实是多对一的特殊情况 -->
+		<!-- 注意：cascade="all" 级联保存-更新-删除 -->
+		<many-to-one name="salaryBase" class="com.tjw.hrmanage.model.SalaryBase" 
+		column="fk_salaryBaseId" cascade="all" 
+		lazy="false" 
+		unique="true">
+			
+		</many-to-one>
+	</class>
+</hibernate-mapping>

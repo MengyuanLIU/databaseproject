@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.tjw.hrmanage.model.SalaryBase" table="t_salarybase">
+		<id name="salaryBaseId" type="integer">
+			<column name="f_salaryBaseId"></column>
+			<generator class="native"></generator>
+		</id>
+		<property name="baseMoney" type="double">
+			<column name="f_baseMoney"></column>
+		</property>
+		<property name="safetyMoney" type="double">
+			<column name="f_safetyMoney"></column>
+		</property>
+	</class>
+</hibernate-mapping>

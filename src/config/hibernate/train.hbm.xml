@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.tjw.hrmanage.model.Train" table="t_traininfo">
+		<id name="trainId" type="integer">
+			<column name="f_trainId"></column>
+			<generator class="native"></generator>
+		</id>
+		<property name="trainMan" type="string">
+			<column name="f_trainMan" length="30"></column>
+		</property>
+		<property name="trainTitle" type="string">
+			<column name="f_trainTitle" length="32"></column>
+		</property>
+		<property name="trainZz" type="string">
+			<column name="f_trainZz" length="32"></column>
+		</property>
+		<property name="trainTime" type="string">
+			<column name="f_trainTime" length="30"></column>
+		</property>
+		<property name="trainAddress" type="string">
+			<column name="f_trainAddress" length="32"></column>
+		</property>
+		<property name="trainEmps" type="string">
+			<column name="f_trainEmps" length="16"></column>
+		</property>
+		<property name="trainNote" type="string">
+			<column name="f_trainNode" length="128"></column>
+		</property>
+	</class>
+</hibernate-mapping>

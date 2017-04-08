@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="utf-8"/>
+     <constant name="struts.devMode" value="true" />
+     <constant name="struts.custom.i18n.resources" value="globalMessages"/> 
+       
+          
+	 <package name="/" namespace="/" extends="struts-default">
+	 	<global-results>
+	 		<result name="error">/error.jsp</result>
+	 		<result name="loginerror" type="redirect">/login.jsp</result>
+	 	</global-results>
+	        <action name="login_*" class="com.tjw.hrmanage.web.action.LoginAction" method="{1}">
+	        	<result name="index">/index.jsp</result>
+	        </action>  
+	        <action name="manager_*" class="com.tjw.hrmanage.web.action.ManagerAction" method="{1}">
+	        	<result name="managerFind">/manager/managerList.jsp</result>
+	             <result name="managerAdd">/manager/managerAdd.jsp</result>
+	             <result name="managerDetail">/manager/managerDetail.jsp</result>
+	             <result name="managerUpdate">/manager/managerUpdate.jsp</result>
+	             <result name="managerDelTip">/manager/managerDelTip.jsp</result>
+	             <result name="managerUpdatePwd">/manager/managerUpdatePwd.jsp</result>
+	        </action>  
+	        <!-- 部门 -->
+	        <action name="dept_*" class="com.tjw.hrmanage.web.action.DeptAction" method="{1}">
+	        	<result name="deptFind">/dept/deptList.jsp</result>
+		  		<result name="deptAdd">/dept/deptAdd.jsp</result>
+		  		<result name="deptDetail">/dept/deptDetail.jsp</result>
+		  		<result name="deptUpdate">/dept/deptUpdate.jsp</result>
+		  		<result name="deptDelTip">/dept/deptDelTip.jsp</result>
+	        </action>  
+	        <!-- 员工操作 -->
+	        <action name="em_*" class="com.tjw.hrmanage.web.action.EmAction" method="{1}">
+	        	<result name="emFind">/em/emList.jsp</result>
+		  		<result name="emAdd">/em/emAdd.jsp</result>
+		  		<result name="emDetail">/em/emDetail.jsp</result>
+		  		<result name="emUpdate">/em/emUpdate.jsp</result>
+		  		<result name="emDelTip">/em/emDelTip.jsp</result>
+	        </action>
+	         <!-- 薪资基本管理操作 -->
+	        <action name="salaryBase_*" class="com.tjw.hrmanage.web.action.SalaryBaseAction" method="{1}">
+	        	<result name="salaryBaseFind">/salary/salaryBaseList.jsp</result>
+		  		<result name="salaryBaseAdd">/salary/salaryBaseAdd.jsp</result>
+		  		<result name="salaryBaseUpdate">/salary/salaryBaseUpdate.jsp</result>
+	        </action>
+	        <!-- 薪资发放记录管理操作-->
+	        <action name="salaryRec_*" class="com.tjw.hrmanage.web.action.SalaryRecAction" method="{1}">
+	        	<result name="salaryRecFind">/salary/salaryRecList.jsp</result>
+		  		<result name="salaryRecAdd">/salary/salaryRecAdd.jsp</result>
+		  		<result name="salaryRecUpdate">/salary/salaryRecUpdate.jsp</result>
+		  		<result name="salaryRecDetail">/salary/salaryRecDetail.jsp</result>
+		  		<result name="salaryRecDelTip">/salary/salaryRecDelTip.jsp</result>
+	        </action>
+	        
+	        <!-- 招聘管理操作 -->
+	        <action name="cdt_*" class="com.tjw.hrmanage.web.action.CandidateAction" method="{1}">
+	        	<result name="cdtFind">/cdt/cdtList.jsp</result>
+		  		<result name="cdtAdd">/cdt/cdtAdd.jsp</result>
+		  		<result name="cdtUpdate">/cdt/cdtUpdate.jsp</result>
+		  		<result name="cdtDetail">/cdt/cdtDetail.jsp</result>
+		  		<result name="cdtDelTip">/cdt/cdtDelTip.jsp</result>
+		  		<result name="listHireTip">/cdt/listHireTip.jsp</result>
+	        </action>
+	        
+	         <!-- 培训管理操作 -->
+	        <action name="train_*" class="com.tjw.hrmanage.web.action.TrainAction" method="{1}">
+	        	<result name="trainFind">/train/trainList.jsp</result>
+		  		<result name="trainAdd">/train/trainAdd.jsp</result>
+		  		<result name="trainUpdate">/train/trainUpdate.jsp</result>
+		  		<result name="trainDetail">/train/trainDetail.jsp</result>
+		  		<result name="trainDelTip">/train/trainDelTip.jsp</result>
+	        </action>
+	        <!-- 计划管理操作 -->
+	        <action name="plan_*" class="com.tjw.hrmanage.web.action.PlanAction" method="{1}">
+	        	<result name="planFind">/plan/planList.jsp</result>
+		  		<result name="planAdd">/plan/planAdd.jsp</result>
+		  		<result name="planUpdate">/plan/planUpdate.jsp</result>
+		  		<result name="planDetail">/plan/planDetail.jsp</result>
+		  		<result name="planDelTip">/plan/planDelTip.jsp</result>
+	        </action>
+	 </package>
+	 
+	 
+</struts>

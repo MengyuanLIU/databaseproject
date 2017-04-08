@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.tjw.hrmanage.model.Candidate" table="t_candidate">
+		<id name="cdtId" type="integer">
+			<column name="f_cdtId"></column>
+			<generator class="native"></generator>
+		</id>
+		<property name="cdtName" type="string" unique="true">
+			<column name="f_cdtName" length="20"></column>
+		</property>
+		<property name="cdtSex" type="string">
+			<column name="f_cdtSex" length="2"></column>
+		</property>
+		<property name="cdtAge" type="integer">
+			<column name="f_cdtAge"></column>
+		</property>
+		<property name="cdtBorn" type="date">
+			<column name="f_cdtBorn"></column>
+		</property>
+		<property name="cdtPosition" type="string">
+			<column name="f_cdtPosition" length="30"></column>
+		</property>
+		<property name="cdtSpeciality" type="string">
+			<column name="f_cdtSpeciality" length="30"></column>
+		</property>
+		<property name="cdtGraduateSchool" type="string">
+			<column name="f_cdtGraduateSchool" length="30"></column>
+		</property>
+		<property name="cdtDegree" type="string">
+			<column name="f_cdtDegree" length="2"></column>
+		</property>
+		<property name="cdtExperience" type="string">
+			<column name="f_cdtExperience" length="2"></column>
+		</property>
+		<property name="cdtTel" type="string">
+			<column name="f_cdtTel" length="20"></column>
+		</property>
+		<property name="cdtAddress" type="string">
+			<column name="f_cdtAddress" length="60"></column>
+		</property>
+		<property name="cdtRegTime" type="date">
+			<column name="f_cdtRegTime"></column>
+		</property>
+		<property name="cdtIntro" type="string">
+			<column name="f_cdtIntro" length="256"></column>
+		</property>
+		<property name="isHire" type="string">
+			<column name="f_isHire" length="2"></column>
+		</property>
+		
+		
+	</class>
+</hibernate-mapping>
